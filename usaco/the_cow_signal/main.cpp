@@ -9,11 +9,21 @@ int main()
 
   int m, n, k; cin >> m >> n >> k;
 
-  vector<string> s(m);
+  vector<string> strs;
 
-  for(int i {0}; i < m; i++) cin >> s[i];
+  while(m--)
+  {
+    string s; cin >> s;
+    string s_2 {""};
 
-  for(string &x: s) cout << x << endl;
+    for(int i {0}; i < n; i++){
+      for(int j {0}; j < k; j++) s_2 += s[i];
+    }
+
+    for(int i {0}; i < k; i++) strs.push_back(s_2);
+  }
+
+  for(string &s: strs) cout << s << endl;
 
   return 0;
 }
