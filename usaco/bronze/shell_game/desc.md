@@ -1,3 +1,4 @@
+**_USACO 2019 January Contest, Bronze_**
 # Shell Game
 
 To pass the time, Bessie the cow and her friend Elsie like to play a version of a game they saw at the county fair.

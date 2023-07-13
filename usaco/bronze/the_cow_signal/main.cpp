@@ -16,7 +16,8 @@ int main()
     string s; cin >> s;
     string s_2 {""};
 
-    for(int i {0}; i < n; i++){
+    for(int i {0}; i < n; i++)
+    {
       for(int j {0}; j < k; j++) s_2 += s[i];
     }
 
