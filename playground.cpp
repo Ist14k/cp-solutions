@@ -4,16 +4,11 @@ using namespace std;
 
 int main()
 {
-  vector <int> a {0, -2, 5, 6};
-  int n=a.size(), p=-1, c=0;
+  string s {"abab"};
 
-  for (int i = 1; i < n; i++) if (a[i-1]>=a[i]) p=i, c++;
+  int n = s.size() / 2;
 
-  if (c>1) return 0;
-  if (c==0) return 1;
-  if (p==n-1 || p==1) return 1;
-  if (a[p-1] < a[p+1]) return 1;
-  if (a[p-2] < a[p]) return 1;
+  cout << (s.substr(0, n) == s.substr(n, n)) << endl;
 
   return 0;
 }
