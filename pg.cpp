@@ -16,6 +16,18 @@ int solve(int n)
 
 int main()
 {
-   int n = 100;
-   cout << solve(n) << endl;
+   vector<int> v {1, 2, 3, 4, 5, 6};
+
+   auto it = find(v.begin(), v.end(), 9);
+
+   if(it != v.end())
+   {
+      v.erase(it, v.end());
+   }
+
+   for(auto it = v.begin(); it != v.end(); it++)
+   {
+      cout << *it << " ";
+   }
+   
 }
