@@ -1,47 +1,50 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
-int main() {
-   int a[10][10], transpose[10][10], row, column, i, j;
+typedef vector<vector<int>> int_matrix;
+typedef vector<int> vec_int;
 
-   cout << "Enter rows and columns of matrix: ";
-   cin >> row >> column;
+void create_matrix(int_matrix &matrix, int r, int c);
+void print_matrix(int_matrix &matrix, int r, int c);
+// int_matrix transpose_matrix(int_matrix &matrix, int r, int c);
 
-   cout << "\nEnter elements of matrix: " << endl;
+int main()
+{
+  cout << "enter row and column respectively separated by a space," << endl;
+  int r, c; cin >> r >> c;
+  int_matrix matrix(r, vec_int(c));
 
-   // Storing matrix elements
-   for (int i = 0; i < row; ++i) {
-      for (int j = 0; j < column; ++j) {
-         cout << "Enter element a" << i + 1 << j + 1 << ": ";
-         cin >> a[i][j];
-      }
-   }
+  create_matrix(matrix, r, c);
+  print_matrix(matrix, r, c);
 
-   // Printing the a matrix
-   cout << "\nEntered Matrix: " << endl;
-   for (int i = 0; i < row; ++i) {
-      for (int j = 0; j < column; ++j) {
-         cout << " " << a[i][j];
-         if (j == column - 1)
-            cout << endl << endl;
-      }
-   }
-
-   // Computing transpose of the matrix
-   for (int i = 0; i < row; ++i)
-      for (int j = 0; j < column; ++j) {
-         transpose[j][i] = a[i][j];
-      }
-
-   // Printing the transpose
-   cout << "\nTranspose of Matrix: " << endl;
-   for (int i = 0; i < column; ++i)
-      for (int j = 0; j < row; ++j) {
-         cout << " " << transpose[i][j];
-         if (j == row - 1)
-            cout << endl << endl;
-      }
-
-   return 0;
+  return 0;
 }
+
+void create_matrix(int_matrix &matrix, int r, int c)
+{
+  int count {1};
+  for(int i {0}; i < r; i++){
+    for(int j {0}; j < c; j++)
+    {
+      matrix[i][j] = count;
+      count ++;
+    }
+  }
+}
+
+void print_matrix(int_matrix &matrix, int r, int c)
+{
+  for(int i {0}; i < r; i++){
+    for(int j {0}; j < c; j++)
+    {
+      cout << matrix[i][j] << " ";
+    }
+    cout << endl;
+  }
+}
+
+// int_matrix transpose_matrix(int_matrix &matrix, int r, int c)
+// {
+//   return;
+// }
