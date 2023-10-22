@@ -1,9 +1,9 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 /*
-  time complexicity -> O(n).
+  time complexity -> O(n).
 */
 
 bool check_prime(int n);
@@ -19,7 +19,7 @@ bool check_prime(int n)
 {
   if(n <= 1) return false;
   
-  for(int i {2}; i < n; i++)
+  for(int i {2}; i < sqrt(n); i++)
   {
     if(n % i == 0) return false;
   }
