@@ -40,7 +40,8 @@ void use_element_maping(vector<int> &vec, int n) {
       continue;
     }
 
-    int count {0};
+    visited[i] = true;
+    int count {1};
     for(int j {i+1}; j < n; j++) {
       if(vec[i] == vec[j]) {
         visited[j] = true;
