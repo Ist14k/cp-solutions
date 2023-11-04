@@ -2,7 +2,9 @@
 
 using namespace std;
 
+// method 1,
 void use_map(vector<int> &vec);
+// method 2,
 void use_element_maping(vector<int> &vec, int n);
 
 int main() {
